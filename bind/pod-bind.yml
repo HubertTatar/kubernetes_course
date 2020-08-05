@@ -1,0 +1,11 @@
+apiVersion: v1
+
+kind: Binding
+
+metadata:
+    name: nginx-binding
+
+target:
+    apiVersion: v1
+    kind: Node
+    name: k8sn

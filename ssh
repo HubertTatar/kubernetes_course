@@ -1,0 +1,9 @@
+ssh k8s@192.168.0.31
+ssh k8s@192.168.0.87
+ssh k8s@192.168.0.136
+
+
+
+https://kifarunix.com/how-to-automate-virtual-machine-installation-on-virtualbox/
+https://perkin.org.uk/posts/create-virtualbox-vm-from-the-command-line.html
+https://www.vagrantup.com/docs/provisioning/shell
