@@ -2,6 +2,7 @@ ssh k8s@192.168.0.31
 ssh k8s@192.168.0.87
 ssh k8s@192.168.0.136
 
+ssh k8s@192.168.1.45
 
 
 https://kifarunix.com/how-to-automate-virtual-machine-installation-on-virtualbox/
