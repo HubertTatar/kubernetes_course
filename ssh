@@ -8,3 +8,17 @@ ssh k8s@192.168.1.45
 https://kifarunix.com/how-to-automate-virtual-machine-installation-on-virtualbox/
 https://perkin.org.uk/posts/create-virtualbox-vm-from-the-command-line.html
 https://www.vagrantup.com/docs/provisioning/shell
+
+
+ VBoxManage startvm k8s_m
+ VBoxManage startvm k8s_n1
+ VBoxManage startvm k8s_n2
+
+ VBoxManage controlvm k8s_m acpipowerbutton
+ VBoxManage controlvm k8s_n2 acpipowerbutton
+ VBoxManage controlvm k8s_n1 acpipowerbutton
+
+
+kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml
+
+https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kube-scheduler

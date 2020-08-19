@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    component: custom-kube-scheduler
+    tier: control-plane
+  name: custom-kube-scheduler
+  namespace: kube-system
+spec:
+  containers:
+  - command:
+    - kube-scheduler
+    - --bind-address=127.0.0.1
+    - --kubeconfig=/etc/kubernetes/scheduler.conf
+    - --leader-elect=true
+    - --scheduler-name=custom-kube-scheduler
+    - --lock-object-name=custom-kube-scheduler
+    image: k8s.gcr.io/kube-scheduler:v1.18.5
+    name: kube-scheduler
